@@ -11,6 +11,4 @@ Implementa la gestió bàsica d'un compte corrent amb ingressos, retirades i tra
 
 -Instal·lació
 
-1. Clona el repositori:
-   ```bash
 
