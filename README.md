@@ -9,6 +9,5 @@ Implementa la gestió bàsica d'un compte corrent amb ingressos, retirades i tra
 - Retirades: màxim 6000, 2 decimals, no superiors al saldo.
 - Transferències: límit diari de 3000, 2 decimals, no negatius.
 
--Instal·lació
 
 
