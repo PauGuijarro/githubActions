@@ -24,7 +24,7 @@ class TDDController extends Controller
         }
 
         $compte = Compte::findOrFail($compteId);
-        $compte->saldo += $import;
+        $compte->balance += $import;
         $compte->save();
 
         return response()->json($compte);
@@ -40,8 +40,8 @@ class TDDController extends Controller
 
         $compte = Compte::findOrFail($compteId);
 
-        if ($compte->saldo >= $import) {
-            $compte->saldo -= $import;
+        if ($compte->balance >= $import) {
+            $compte->balance -= $import;
             $compte->save();
         }
 
@@ -66,13 +66,13 @@ class TDDController extends Controller
             ->whereDate('created_at', Carbon::today())
             ->sum('quantitat');
 
-        if ($importTransferitAvui + $import > 3000 || $compteOrigen->saldo < $import) {
+        if ($importTransferitAvui + $import > 3000 || $compteOrigen->balance < $import) {
             return response()->json(['error' => 'Transferència no vàlida'], 400);
         }
 
         DB::transaction(function () use ($compteOrigen, $compteDesti, $import) {
-            $compteOrigen->saldo -= $import;
-            $compteDesti->saldo += $import;
+            $compteOrigen->balance -= $import;
+            $compteDesti->balance += $import;
 
             $compteOrigen->save();
             $compteDesti->save();
