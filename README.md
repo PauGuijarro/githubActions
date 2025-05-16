@@ -13,4 +13,4 @@ Aquest és un projecte de demostració desenvolupat amb **Laravel** utilitzant l
 
 1. Clona el repositori:
    ```bash
-   git clone https://github.com/JoMaGuPa/bank-account-tdd.git
+   git clone https://github.com/PauGuijarro/githubActions.git
