@@ -92,3 +92,4 @@ class CompteController extends Controller
         ]);
     }
 }
+
