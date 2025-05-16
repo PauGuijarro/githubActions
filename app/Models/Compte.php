@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cuenta extends Model
+class Compte extends Model
 {
-    protected $fillable = ['balance'];
+    protected $fillable = ['saldo'];
 }
