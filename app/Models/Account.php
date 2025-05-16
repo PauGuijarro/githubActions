@@ -8,6 +8,7 @@ class Account extends Model
 {
     protected $guarded = [];
 
+    //funcions per comprovar el saldo
     public function deposit($amount)
     {
         if ($amount <= 0 || $amount > 6000 || $this->hasMoreThanTwoDecimals($amount)) {
